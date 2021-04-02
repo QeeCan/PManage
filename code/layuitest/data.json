@@ -1,0 +1,36 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 3000000,
+    "data": [{
+            "id": "10001",
+            "name": "雪碧",
+            "description": "啊？",
+            "price": 4.00,
+            "categorylevelone": "饮料",
+            "categoryleveltwo": "含糖",
+            "categorylevelthree": "正常",
+            "filename": "jiujiu.jpg"
+        },
+        {
+            "id": "10001",
+            "name": "雪碧",
+            "description": "啊？",
+            "price": 4.00,
+            "categorylevelone": "饮料",
+            "categoryleveltwo": "含糖",
+            "categorylevelthree": "正常",
+            "fileName": "jiujiu.jpg"
+        },
+        {
+            "id": "10001",
+            "name": "雪碧",
+            "description": "啊？",
+            "price": 4.00,
+            "categorylevelone": "饮料",
+            "categoryleveltwo": "含糖",
+            "categorylevelthree": "正常",
+            "filename": "jiujiu.jpg"
+        }
+    ]
+}

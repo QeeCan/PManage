@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bar</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+    <!-- 引入 jquery.js -->
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        $(function() {
+            $.ajax({
+                "url": "http://101.132.179.78:8084/barVO",
+                "type": "POST",
+                "success": function(data) {
+
+                    //打个log验证一下数据能否能通过jQuery传输到前端
+                    console.log(data.names)
+                    console.log(data.values)
+
+                    var myChart = echarts.init(document.getElementById("main"));
+                    var option = {
+                        xAxis: {
+                            type: 'category',
+                            data: data.names
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [{
+                            data: data.values,
+                            type: 'bar',
+                            showBackground: true,
+                            backgroundStyle: {
+                                color: 'rgba(180, 180, 180, 0.2)'
+                            }
+                        }]
+                    };
+                    myChart.setOption(option);
+                }
+
+            });
+        })
+
+
+        // 使用刚指定的配置项和数据显示图表。
+    </script>
+</body>
+
+</html>
